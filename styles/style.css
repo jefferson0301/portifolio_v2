@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/*como declarar variaveis globais no css*/
+:root{
+    /* --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727; */
+
+    --cor-primaria: #092635;
+    --cor-secundaria: #1B4242 ;
+    --cor-terciaria: #5C8374 ;
+    --cor-hover: #9EC8B9 ;
+
+    --fonte-principal: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrast', sans-serif;
+
+    --tamanho-fonte-principal: 24px;
+}
+
+*{/*   * => seleciona todos os elementos  atribuindo 0 ao padding e ao margin você 
+    está resetando o css da página */
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    /* height: 100vh; */
+    box-sizing: border-box; /*serve para o elemento filho encolher para fica dentro do elemento pai
+    assim o elemento filho não vai estourar o elemento pai*/
+    /*Site que ajuda a escolher combinações de cores
+    https://color.adobe.com/pt/create/color-wheel */
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+}
+
+/*
+span{
+    color: #22D4FD;
+    border: 1px solid #22D4FD;
+    padding: 10px;
+}*/
+
+.cabecalho{
+    padding: 2% 0 0 10%;/*primeiro valor topo segundo direita terceiro baixo quarto esquerda "relogio começando ao meio dia"*/
+}
+
+.cabecalho__menu{
+    display: flex;  
+    text-align: center;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-size: var(--tamanho-fonte-principal);
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+
+.apresentacao{
+    padding: 2% 10% ; 
+    /* documentação bpa flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    display: flex; /*diplay flex deixa os elementos flexiveis*/
+    align-items: center;/*os items são alinhados no centro*/
+    justify-content: space-between; /*espaçamento entre os itens*/
+    gap: 82px;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;/*direção do flexbox vai ser em coluna por padrão ela é em linha*/
+    gap: 40px;/*espaçamento no flexbox*/
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo-destaque{
+    color: #3F36E5;
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 0.875rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links{
+    display: flex;
+    justify-content: space-around ;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-principal) ;
+    font-weight: 400;
+    font-size: var(--tamanho-fonte-principal);
+}
+
+.apresentacao__links__navegacao{
+    /*background-color: #22D4FD; atalho seleciona control + k + c */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid var(--cor-terciaria) ;
+    width: 50%;
+    text-align: center;/*centraliza o texto*/
+    border-radius: 8px;/*arredondamento nos cantos*/
+    font-size: var(--tamanho-fonte-principal);
+    font-weight: 600;/*peso da fonte ele fica mais grosso*/
+    padding: 21.5px 0;
+    text-decoration: none;/*sublinhado em baixo do link*/
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links__link:hover{
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+/* praticando hover
+#minhafoto:hover{
+    height: 100%;
+    border: 10px solid var(--cor-terciaria);
+}*/
+
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 1rem;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: var(--tamanho-fonte-principal);
+}
+
+
+/*estilizando a página about*/
+
+h2{
+    padding: 0.5%;
+    margin-bottom: 3%;
+    border: 3px solid var(--cor-terciaria) ;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;/*tira o ponto na frente da lista*/
+}
+
+@media (max-width: 1200px ){
+
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+
+    
+}

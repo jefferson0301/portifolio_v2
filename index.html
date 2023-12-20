@@ -1,0 +1,67 @@
+<!-- para iniciar ! enter inicia -->
+<!DOCTYPE html>
+<html lang="pt-br"><!--pt-br significa que a lingua oficial é o portugues do Brasil-->
+<head>
+    <meta charset="UTF-8"><!--dicionário de caracteres  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--
+    viewport a tela onde estamos criando
+    initial-scale=1.0 faz uma escala
+    baseada onde ele tá abrindo-->
+    <title>Portifólio</title>
+    <link rel="stylesheet" href="./styles/style.css"> <!--rel diz a relação que um arquivo tem com o outro
+    nesse caso stylesheet significa folha de estilo href diz a referencia que ele ta puxando o arquivo
+    nesse caso style.css -->
+</head>
+<body>
+
+    <!--header, main e footer tags para dividir o html
+    header cabeça
+    main corpo
+    footer o cabeçalho-->
+
+    <header class="cabecalho">
+        <!--tag nav usada para inserir links para navegar-->
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="./about.html">Sobre mim</a>
+        </nav>
+    </header>
+
+    <main class="apresentacao" >
+        <section class="apresentacao__conteudo" ><!-- padrão pai -> filho pai__nome_filho -->        
+            <h1 class="apresentacao__conteudo__titulo" >
+                Eleve seu negócio digital a outro nível com um Front-end de qualidade!
+                <!--<strong class="titulo-destaque" > com um Front-end de qualidade! </strong> tag que coloca negrito --> 
+            </h1>
+            <p class="apresentacao__conteudo__texto" >
+                Olá! Sou Jefferson Soare, desenvolvedor <span> Front-end </span>  com especialidade em  HTML , CSS, Java Script e React .
+                Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?
+            </p>
+
+            <div class="apresentacao__links" >
+                <h2 class="apresentacao__links__subtitulo" >Acesse minhas redes:</h2>
+                <a class="apresentacao__links__navegacao" href="https://www.instagram.com/">
+                    <img src="./assets/icone__instagram.png" width="40px" height="40px" alt="instagram"> 
+                    Instagram 
+                </a> <!--ancora redireciona a página para outro link -->
+                
+                <a class="apresentacao__links__navegacao" href="https://github.com/jefferson0301/formvalidation">
+                    <img src="./assets/githut__icone.jpg" width="40px" height="40px" alt="github">
+                    Github 
+                </a>
+
+                <a class="apresentacao__links__navegacao" href="https://github.com/jefferson0301/formvalidation">
+                    <img src="./assets//twitch__icone.png" width="40px" height="40px" alt="github">
+                    Twitch 
+                </a>
+
+            </div>
+        </section>
+        <img class="apresentacao__imagem" id="minhafoto" src="./assets/minhafoto.jpg"  alt="foto jefferson">
+    </main>
+
+    <footer class="rodape" >
+        <p>Desenvolvido por Jefferson Soares</p>
+    </footer>
+</body>
+</html>
